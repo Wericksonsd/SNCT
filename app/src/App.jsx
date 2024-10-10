@@ -15,11 +15,11 @@ import PantanalLocked from "./assets/pantanalLKD.jpg"
 
 function App() {
   
-  const [pantanalCard, setPantanalCard] = useState(Pantanal);
+  const [pantanalCard, setPantanalCard] = useState(PantanalLocked);
 
   const [modalPtn, setModalPtn] = useState(true);
 
-  const handleClick = () => setPantanalCard(PantanalLocked)
+  const handleClick = () => setPantanalCard(Pantanal)
   const handleModal = (num) => {
     switch(num){
 
@@ -67,6 +67,7 @@ function App() {
         </SwiperSlide>
       </Swiper>
 
+      {/* PANTANAL */}
       {modalPtn && <div className='modal'>
         <div className={`${pantanalCard === Pantanal ? 'pantanalUld' : 'pantanalLkd'} dentroModal`}>
             <h2 className='ttlBioma'>PANTANAL</h2>
@@ -107,7 +108,11 @@ function App() {
                 <div className='coor'></div>
               </div>
             ) : (
-              <p> Opa </p>
+              <div className='containerPergunta'>
+                <h2>aaaaaaaaa aaaaaaa aaa</h2>
+                <input type="text" placeholder='INSIRA O CÓDIGO'/>
+                <button type='button' onClick={() => handleClick()}>ENVIAR</button>
+              </div>
             )}
             
             <button onClick={() => handleModal(1)} className='botaoModal'>x</button>
