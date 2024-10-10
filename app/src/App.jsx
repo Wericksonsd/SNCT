@@ -138,7 +138,7 @@ function App() {
               </div>
             ) : (
               <div className='containerPergunta'>
-                <h2>aaaaaaaaa aaaaaaa aaa</h2>
+                <h2>QUANTAS BERINJELAS O WERICKSON CONSEGUE POR NA BUNDA ANTES DE TER UM ATAQUE CARDÍACO?</h2>
                 <form onSubmit={handleSubmit}>
                   <input type="number"
                   placeholder='INSIRA O CÓDIGO'
@@ -156,8 +156,10 @@ function App() {
       </div>}
 
       {codCorreto && <div className='modalErro'>
-          <p>CÓDIGO ERRADO CHEFE</p>
-          <button type='button' onClick={() => handleModalErro()}>TENTAR DE NOVO</button>
+          <div className='erroContainer'>
+            <p>CÓDIGO ERRADO CHEFE</p>
+            <button type='button' onClick={() => handleModalErro()}>TENTAR DE NOVO</button>
+          </div>
       </div>}
     </div>
   )
