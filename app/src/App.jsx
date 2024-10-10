@@ -15,11 +15,36 @@ import PantanalLocked from "./assets/pantanalLKD.jpg"
 
 function App() {
   
+  const [pantanalPerg, setPantanalPer] = useState();
+
   const [pantanalCard, setPantanalCard] = useState(PantanalLocked);
 
   const [modalPtn, setModalPtn] = useState(true);
 
-  const handleClick = () => setPantanalCard(Pantanal)
+  const [inputCod, setInputCod] = useState(99999);
+  const [codCorreto, setCodCorreto] = useState(false);
+
+
+  const handleInputChange = (event) => {
+    setInputCod(event.target.value);
+  };
+
+  const handleSubmit = () => {
+
+
+
+  }
+
+  const handleClick = () => {
+    if(inputCod == 22013){
+      setPantanalCard(Pantanal)
+      setModalPtn(x => !x)
+    } else {
+      setInputCod("")
+      setCodCorreto(true)      
+    }
+  }
+
   const handleModal = (num) => {
     switch(num){
 
@@ -30,6 +55,10 @@ function App() {
       default:
         return 0;
     }
+  }
+
+  const handleModalErro = () => {
+    setCodCorreto(x => !x)
   }
 
   return (
@@ -110,13 +139,25 @@ function App() {
             ) : (
               <div className='containerPergunta'>
                 <h2>aaaaaaaaa aaaaaaa aaa</h2>
-                <input type="text" placeholder='INSIRA O CÓDIGO'/>
-                <button type='button' onClick={() => handleClick()}>ENVIAR</button>
+                <form onSubmit={handleSubmit}>
+                  <input type="number"
+                  placeholder='INSIRA O CÓDIGO'
+                  value={inputCod}
+                  onChange={handleInputChange}
+                  maxLength={5}
+                  id='inputPTN' />
+                  <button type='button' onClick={() => handleClick()}>ENVIAR</button>
+                </form>
               </div>
             )}
             
             <button onClick={() => handleModal(1)} className='botaoModal'>x</button>
         </div>
+      </div>}
+
+      {codCorreto && <div className='modalErro'>
+          <p>CÓDIGO ERRADO CHEFE</p>
+          <button type='button' onClick={() => handleModalErro()}>TENTAR DE NOVO</button>
       </div>}
     </div>
   )
