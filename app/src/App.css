@@ -1,10 +1,11 @@
 .container{
   width: 100vw;
   height: 100vh;
-  background-color: #242424;
+  background-color: #502424;
+  position: relative;
 }
 
-.swiper {
+.mySwiper {
   width: 280px;
   height: 550px;
 }
@@ -21,6 +22,9 @@
 }
 
 
-.swiper-slide .img{
-  background-size: cover;
+.modal{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #121525;
 }
