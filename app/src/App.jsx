@@ -96,7 +96,7 @@ function App() {
           }, {
             id: 4, resposta: 'Nordeste'
         }])
-        setRptCertaCaatinga(2)
+        setRptCertaCaatinga(3)
 
         setPgtAmazonia();
         setRptAmazonia([{
@@ -118,25 +118,29 @@ function App() {
         }])
         setRptCertaPampa(3);
 
-        setPgtMtAtlantica();
+        setPgtMtAtlantica('Quais as características da vegetação da Mata Atlântica?');
         setRptMtAtlantica([{
-            id: 1, resposta: 'Jacaré'
+            id: 1, resposta: 'Planícies inundáveis e vegetais aquáticos'
           }, {
-            id: 2, resposta: 'Onça Pintada'
+            id: 2, resposta: 'Vegetação rasteira e adaptável ao frio'
           }, {
-            id: 3, resposta: 'Tucano'
+            id: 3, resposta: 'Mata densa e bastante úmida'
+          }, {
+            id: 4, resposta: 'Árvores baixas e troncos retorcidos'
         }])
         setRptCertaMtAtlantica(3);
 
-        setPgtCerrado();
+        setPgtCerrado('Qual é a região predominante que se encontra o cerrado?');
         setRptCerrado([{
-            id: 1, resposta: 'Jacaré'
+            id: 1, resposta: 'Centro-oeste'
           }, {
-            id: 2, resposta: 'Onça Pintada'
+            id: 2, resposta: 'Sul e Sudeste'
           }, {
-            id: 3, resposta: 'Tucano'
+            id: 3, resposta: 'Sudeste e Nordeste'
+          }, {
+            id: 4, resposta: 'Nordeste e Norte'
         }])
-        setRptCertaCerrado(3);   
+        setRptCertaCerrado(1);   
 
         break;
 
@@ -153,11 +157,13 @@ function App() {
 
         setPgtCaatinga('Quais são as principais adaptações dos cactos da Caatinga para sobreviver no semiárido?');
         setRptCaatinga([{
-            id: 1, resposta: 'Jacaré'
+            id: 1, resposta: 'Crescimento rápido e florescimento o ano todo'
           }, {
-            id: 2, resposta: 'Onça Pintada'
+            id: 2, resposta: 'Armazenamento de água e espinhos em vez de folhas'
           }, {
-            id: 3, resposta: 'Tucano'
+            id: 3, resposta: 'Produção de sementes que germinam apenas na estação seca'
+          },{
+            id: 4, resposta: 'Folhas largas e flexíveis que captam a umidade do ar'
         }])
         setRptCertaCaatinga(3)
 
@@ -191,13 +197,15 @@ function App() {
         }])
         setRptCertaMtAtlantica(3);
 
-        setPgtCerrado();
+        setPgtCerrado('Qual animal é a cara do cerrado?');
         setRptCerrado([{
-            id: 1, resposta: 'Jacaré'
+            id: 1, resposta: 'Ovelha'
           }, {
-            id: 2, resposta: 'Onça Pintada'
+            id: 2, resposta: 'Formiga-fantasma'
           }, {
-            id: 3, resposta: 'Tucano'
+            id: 3, resposta: 'Lobo-guará'
+          }, {
+            id: 4, resposta: 'Lontra'
         }])
         setRptCertaCerrado(3);
         break;
