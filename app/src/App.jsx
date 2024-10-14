@@ -134,8 +134,9 @@ function App() {
         >
           <SwiperSlide onClick={() => handleModal(1)}>
             <div className='containerCardsMenores'>
-              <div className={`${pantanalLocked ? 'pantanalCardLock' : 'pantanalCardOpen'}`}>
+              <div className={`${pantanalLocked ? 'pantanalCardLock' : 'pantanalCardOpen'} cardsContainerInside`}>
                 <h2>PANTANAL</h2>
+                <p>CLIQUE PARA EXPANDIR</p>
               </div>
             </div>
           </SwiperSlide>

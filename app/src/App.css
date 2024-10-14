@@ -313,19 +313,49 @@
   text-align: center;
 }
 
-.containerCardsMenores{
-  width: 100%;
-  heigth: 100%;
-  padding: 20px;
+.containerCardsMenores{  
+  width: 280px;
+  height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: url(../src/assets/backgroundPapiroClaro.jpg);
 }
 
-.containerCardsMenores div{
-  max-width: 100%;
-  max-heigth: 100%;
+.cardsContainerInside{
+  width: 240px;
+  height: 560px;
   border-radius: 15px;
-  background-image: url(../src/assets/backgroundPapiroClaro.jpg);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #222222;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cardsContainerInside > h2{
+  font-weight: 400;
+  font-size: 2.3rem;
+  text-align: center;
+  font-family: "Lilita One", sans-serif;  
+  text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.cardsContainerInside > p{
+  font-weight: 500;
+  font-size: 0.9rem;  
+  text-shadow: 0.1em 0.1em 0.2em black;
+  text-align: center;
+}
+
+.pantanalCardLock{
+  background-image: url(../src/assets/pantanalLKD.jpg)
+}
+
+.pantanalCardOpen{
+  background-image: url(../src/assets/pantanalBG.jpg)
 }
