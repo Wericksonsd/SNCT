@@ -10,7 +10,7 @@ import 'swiper/css/effect-cards'
 import { EffectCards } from 'swiper/modules'
 
 import Pantanal from "./assets/pantanalUnlocked.png"
-import PantanalLocked from "./assets/pantanalLKD.jpg"
+
 
 
 function App() {
