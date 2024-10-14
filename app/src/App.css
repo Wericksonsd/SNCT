@@ -381,19 +381,19 @@
   box-shadow: inset 0px 0px 28px 1px rgba(0,0,0,0.80);
 }
 
-.amazoniaCardLock{
-  background-image: url(https://drive.google.com/file/d/1Ey6ke786hlW1Y0D1NHoInNWv2a90dhYY/view?usp=drive_link)
+.amazoniaCardLock {
+  background-image: url('https://i.imgur.com/YD4ZBhF.png');
 }
 .amazoniaCardOpen{
-  background-image: url(../src/assets/amazoniaUnlocked.png)
+  background-image: url('https://i.imgur.com/zo5UWlr.png')
 }
 .amazoniaLkd{
-  background-image: url(https://drive.google.com/file/d/1Ey6ke786hlW1Y0D1NHoInNWv2a90dhYY/view?usp=drive_link);
+  background-image: url('https://i.imgur.com/YD4ZBhF.png');
   background-size: cover;  
   box-shadow: inset 0px 0px 28px 1px rgba(0,0,0,0.80);
 }
 .amazoniaUld{
-  background-image: url(../src/assets/amazoniaUnlocked.png);
+  background-image: url('https://i.imgur.com/zo5UWlr.png');
   background-size: cover;
   background-position: center -15px;
   box-shadow: inset 0px 0px 28px 1px rgba(0,0,0,0.80);
