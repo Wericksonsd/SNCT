@@ -1,5 +1,4 @@
 import '../../src/App.css'
-import './caatinga.css'
 
 export const CaatingaModal = ({ caatingaLocked, pgtCaatinga, rptCaatinga, iptResposta, handleInputChange, handleSubmit, handleRespostaEnvio, handleModal }) => {
     return (

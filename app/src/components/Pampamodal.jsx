@@ -1,5 +1,4 @@
-import '../../src/App.css';
-import './pampa.css'
+import '../../src/App.css'
 
 export const PampaModal = ({ pampaLocked, pgtPampa, rptPampa, iptResposta, handleInputChange, handleSubmit, handleRespostaEnvio, handleModal }) => {
     return (

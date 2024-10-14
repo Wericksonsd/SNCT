@@ -1,5 +1,4 @@
-import '../../src/App.css';
-import './pantanal.css';
+import '../../src/App.css'
 
 export const PantanalModal = ({ pantanalLocked, pgtPantanal, rptPantanal, iptResposta, handleInputChange, handleSubmit, handleRespostaEnvio, handleModal }) => {
     return (

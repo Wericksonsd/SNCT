@@ -1,5 +1,4 @@
 import '../../src/App.css'
-import './cerrado.css'
 
 export const CerradoModal = ({ cerradoLocked, pgtCerrado, rptCerrado, iptResposta, handleInputChange, handleSubmit, handleRespostaEnvio, handleModal }) => {
     return (

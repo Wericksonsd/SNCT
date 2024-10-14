@@ -1,5 +1,4 @@
-import '../../src/App.css';
-import './amazonia.css'
+import '../../src/App.css'
 
 export const AmazoniaModal = ({ amazoniaLocked, pgtAmazonia, rptAmazonia, iptResposta, handleInputChange, handleSubmit, handleRespostaEnvio, handleModal }) => {
     return (

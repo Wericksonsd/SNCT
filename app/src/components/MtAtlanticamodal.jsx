@@ -1,5 +1,4 @@
-import '../../src/App.css';
-import './mtAtlantica.css'
+import '../../src/App.css'
 
 export const MtAtlanticaModal = ({ mtAtlanticaLocked, pgtMtAtlantica, rptMtAtlantica, iptResposta, handleInputChange, handleSubmit, handleRespostaEnvio, handleModal }) => {
     return (
