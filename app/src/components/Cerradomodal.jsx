@@ -1,11 +1,12 @@
-import '../../src/App.css';
+import '../../src/App.css'
+import './cerrado.css'
 
-export const PantanalModal = ({ pantanalLocked, pgtPantanal, rptPantanal, iptResposta, handleInputChange, handleSubmit, handleRespostaEnvio, handleModal }) => {
+export const CerradoModal = ({ cerradoLocked, pgtCerrado, rptCerrado, iptResposta, handleInputChange, handleSubmit, handleRespostaEnvio, handleModal }) => {
     return (
     <div className='modal'>
-        <div className={`${!pantanalLocked ? 'pantanalUld' : 'pantanalLkd'} dentroModal`}>
-        <h2 className='ttlBioma'>PANTANAL</h2>
-        {!pantanalLocked ? (
+        <div className={`${!cerradoLocked ? 'cerradoUld' : 'cerradoLkd'} dentroModal`}>
+        <h2 className='ttlBioma'>CERRADO</h2>
+        {!cerradoLocked ? (
             <div>
             <div className='descricaoBiomas'>
                 <p>O Pantanal é a maior planície alagada do mundo, localizado principalmente no Brasil, mas também se estendendo pelo Paraguai e Bolívia. Conhecido por sua rica biodiversidade, o Pantanal é um dos ecossistemas mais importantes do planeta.</p>
@@ -34,23 +35,23 @@ export const PantanalModal = ({ pantanalLocked, pgtPantanal, rptPantanal, iptRes
             </div>
         ) : (
             <div className='containerPergunta'>
-            <h2>{pgtPantanal}</h2>
+            <h2>{pgtCerrado}</h2>
             <form onSubmit={handleSubmit}>
                 <select 
                 value={iptResposta}
                 onChange={handleInputChange}
                 id='respPTN'
                 className='iptRespSelector'>
-                {rptPantanal.map((resp) =>
+                {rptCerrado.map((resp) =>
                     <option key={resp.id} value={resp.id}>{resp.resposta}</option>
                 )}
                 </select>
-                <button type='button' onClick={() => handleRespostaEnvio(1)}>ENVIAR</button>
+                <button type='button' onClick={() => handleRespostaEnvio(6)}>ENVIAR</button>
             </form>
             </div>
         )}
 
-        <button onClick={() => handleModal(1)} className='botaoModal'>x</button>
+        <button onClick={() => handleModal(6)} className='botaoModal'>x</button>
         </div>
     </div>
     );

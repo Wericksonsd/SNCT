@@ -12,6 +12,9 @@ import { EffectCards } from 'swiper/modules'
 import { PantanalModal } from './components/Pantanalmodal'
 import { CaatingaModal } from './components/Caatingamodal'
 import { AmazoniaModal } from './components/Amazoniamodal'
+import { PampaModal } from './components/Pampamodal'
+import { MtAtlanticaModal } from './components/MtAtlanticamodal'
+import { CerradoModal } from './components/Cerradomodal'
 
 
 
@@ -83,13 +86,15 @@ function App() {
         }])
         setRptCertaPtn(3)
 
-        setPgtCaatinga('aaaaassd as aas ');
+        setPgtCaatinga('Quais regiões do Brasil são mais associadas à Caatinga?');
         setRptCaatinga([{
-            id: 1, resposta: '11111'
+            id: 1, resposta: 'Sul e Sudeste'
           }, {
-            id: 2, resposta: '222222222a'
+            id: 2, resposta: 'Centro-Oeste'
           }, {
-            id: 3, resposta: '3333333333'
+            id: 3, resposta: 'Norte e Nordeste'
+          }, {
+            id: 4, resposta: 'Nordeste'
         }])
         setRptCertaCaatinga(2)
 
@@ -146,7 +151,7 @@ function App() {
         }])
         setRptCertaPtn(3)
 
-        setPgtCaatinga();
+        setPgtCaatinga('Quais são as principais adaptações dos cactos da Caatinga para sobreviver no semiárido?');
         setRptCaatinga([{
             id: 1, resposta: 'Jacaré'
           }, {
@@ -226,6 +231,38 @@ function App() {
         if (iptResposta == rptCertaCaatinga){
           setCaatingaLocked(false)
           setModalCaatinga(x => !x)
+        } else {
+          setCodCorreto(x => !x)
+        } break;
+
+        case 3:
+        if (iptResposta == rptCertaAmazonia){
+          setAmazoniaLocked(false)
+          setModalAmazonia(x => !x)
+        } else {
+          setCodCorreto(x => !x)
+        } break;
+
+        case 4:
+        if (iptResposta == rptCertaPampa){
+          setPampaLocked(false)
+          setModalPampa(x => !x)
+        } else {
+          setCodCorreto(x => !x)
+        } break;
+
+        case 5:
+        if (iptResposta == rptCertaMtAtlantica){
+          setMtAtlanticaLocked(false)
+          setModalMtAtlantica(x => !x)
+        } else {
+          setCodCorreto(x => !x)
+        } break;
+
+        case 6:
+        if (iptResposta == rptCertaCerrado){
+          setCerradoLocked(false)
+          setModalCerrado(x => !x)
         } else {
           setCodCorreto(x => !x)
         } break;
@@ -379,6 +416,51 @@ function App() {
           amazoniaLocked={amazoniaLocked}
           pgtAmazonia={pgtAmazonia}
           rptAmazonia={rptAmazonia}
+        />
+      )
+      }
+
+      {/* PAMPA */}
+      {modalPampa && (        
+        <PampaModal
+          handleInputChange={handleInputChange}
+          handleModal={handleModal}
+          handleRespostaEnvio={handleRespostaEnvio}
+          handleSubmit={handleSubmit}
+          iptResposta={iptResposta}
+          pampaLocked={pampaLocked}
+          pgtPampa={pgtPampa}
+          rptPampa={rptPampa}
+        />
+      )
+      }
+
+      {/* MATA ATLANTICA */}
+      {modalMtAtlantica && (        
+        <MtAtlanticaModal
+          handleInputChange={handleInputChange}
+          handleModal={handleModal}
+          handleRespostaEnvio={handleRespostaEnvio}
+          handleSubmit={handleSubmit}
+          iptResposta={iptResposta}
+          mtAtlanticaLocked={mtAtlanticaLocked}
+          pgtMtAtlantica={pgtMtAtlantica}
+          rptMtAtlantica={rptMtAtlantica}
+        />
+      )
+      }
+
+      {/* CERRADO */}
+      {modalCerrado && (        
+        <CerradoModal
+          handleInputChange={handleInputChange}
+          handleModal={handleModal}
+          handleRespostaEnvio={handleRespostaEnvio}
+          handleSubmit={handleSubmit}
+          iptResposta={iptResposta}
+          cerradoLocked={cerradoLocked}
+          pgtCerrado={pgtCerrado}
+          rptCerrado={rptCerrado}
         />
       )
       }

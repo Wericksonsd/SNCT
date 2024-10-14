@@ -1,11 +1,12 @@
 import '../../src/App.css';
+import './mtAtlantica.css'
 
-export const PantanalModal = ({ pantanalLocked, pgtPantanal, rptPantanal, iptResposta, handleInputChange, handleSubmit, handleRespostaEnvio, handleModal }) => {
+export const MtAtlanticaModal = ({ mtAtlanticaLocked, pgtMtAtlantica, rptMtAtlantica, iptResposta, handleInputChange, handleSubmit, handleRespostaEnvio, handleModal }) => {
     return (
     <div className='modal'>
-        <div className={`${!pantanalLocked ? 'pantanalUld' : 'pantanalLkd'} dentroModal`}>
+        <div className={`${!mtAtlanticaLocked ? 'mtatlanticaUld' : 'mtatlanticaLkd'} dentroModal`}>
         <h2 className='ttlBioma'>PANTANAL</h2>
-        {!pantanalLocked ? (
+        {!mtAtlanticaLocked ? (
             <div>
             <div className='descricaoBiomas'>
                 <p>O Pantanal é a maior planície alagada do mundo, localizado principalmente no Brasil, mas também se estendendo pelo Paraguai e Bolívia. Conhecido por sua rica biodiversidade, o Pantanal é um dos ecossistemas mais importantes do planeta.</p>
@@ -34,23 +35,23 @@ export const PantanalModal = ({ pantanalLocked, pgtPantanal, rptPantanal, iptRes
             </div>
         ) : (
             <div className='containerPergunta'>
-            <h2>{pgtPantanal}</h2>
+            <h2>{pgtMtAtlantica}</h2>
             <form onSubmit={handleSubmit}>
                 <select 
                 value={iptResposta}
                 onChange={handleInputChange}
                 id='respPTN'
                 className='iptRespSelector'>
-                {rptPantanal.map((resp) =>
+                {rptMtAtlantica.map((resp) =>
                     <option key={resp.id} value={resp.id}>{resp.resposta}</option>
                 )}
                 </select>
-                <button type='button' onClick={() => handleRespostaEnvio(1)}>ENVIAR</button>
+                <button type='button' onClick={() => handleRespostaEnvio(5)}>ENVIAR</button>
             </form>
             </div>
         )}
 
-        <button onClick={() => handleModal(1)} className='botaoModal'>x</button>
+        <button onClick={() => handleModal(5)} className='botaoModal'>x</button>
         </div>
     </div>
     );
