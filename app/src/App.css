@@ -336,6 +336,7 @@
 }
 
 .iptRespSelector{
+  max-width: 75dvw;
   padding: 5px 50px;
   text-decoration: none;
   color: #222222;

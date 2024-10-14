@@ -108,7 +108,7 @@ function App() {
         }])
         setRptCertaAmazonia(3);
 
-        setPgtPampa();
+        setPgtPampa('Qual é o principal tipo de vegetação que existe no bioma Pampa?');
         setRptPampa([{
             id: 1, resposta: 'Jacaré'
           }, {
