@@ -11,29 +11,71 @@ import { EffectCards } from 'swiper/modules'
 
 import Pantanal from "./assets/pantanalBGcerto.jpg"
 import PantanalLocked from "./assets/pantanalLKD.jpg"
-import InsgAmazonas from "./assets/insignias/amazonas.png"
 
 
 function App() {
   
-  const [pantanalPerg, setPantanalPer] = useState();
-
+  const [nvlEscolhido, setNivelEscolhido] = useState(0);
   const [pantanalCard, setPantanalCard] = useState(PantanalLocked)
 
-  const [modalPtn, setModalPtn] = useState(true)
+  const [modalNvl, setModalNvl] = useState(true)
+  const [modalPtn, setModalPtn] = useState(false)
 
-  const [inputCod, setInputCod] = useState(99999)
+  const [inputCod, setInputCod] = useState('')
   const [codCorreto, setCodCorreto] = useState(false)
 
 
-  const handleInputChange = (event) => {
-    setInputCod(event.target.value)
+  {/* PERGUNTAS */}
+  const [pgtPantanal, setPgtPantanal] = useState('')
+  const [rptPantanal, setRptPantanal] = useState('')
+  
+  const [pgtCaatinga, setPgtCaatinga] = useState('')
+  const [pgtAmazonia, setPgtAmazonia] = useState('')
+  const [pgtPampa, setPgtPampa] = useState('')
+  const [pgtMtAtlantica, setPgtMtAtlantica] = useState('')
+  const [pgtCerrado, setPgtCerrado] = useState('')
+
+  const handleNvlEscolha = (val) => {
+    setNivelEscolhido(val);    
+    setPerguntasNvl(val);
+    setModalNvl((x) => !x);
   }
 
-  const handleSubmit = () => {
+  const setPerguntasNvl = (nivel) => {
+    switch(nivel){
 
+      case 1:
+        setPgtAmazonia();
+        setPgtCaatinga();
+        setPgtCerrado();
+        setPgtMtAtlantica();
+        setPgtPampa();
+        setPgtPantanal('QUEM É MANUEL GOMES?');
+        break;
 
+      case 2:
+        setPgtAmazonia();
+        setPgtCaatinga();
+        setPgtCerrado();
+        setPgtMtAtlantica();
+        setPgtPampa();
+        setPgtPantanal('TU VIU OS DOIS GORDINHO TE PROCURANDO?');
+        break;
 
+      default:
+        return 0;
+    }
+  }
+
+  
+  const handleInputChange = (event) => {
+    setRptPantanal(event.target.value)
+  }
+
+  
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
   }
 
   const handleClick = () => {
@@ -66,7 +108,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>TITULO</h1>
+      <h1 className='tituloBioma'>BUSCA AOS BIOMAS</h1>
       <div className='swiperContainer'>
         <Swiper
         effect={'cards'}
@@ -102,12 +144,9 @@ function App() {
       </div>
 
       <div className='insignias'>
-        <div>A</div>
-        <div>B</div>
-        <div>C</div>
-        <div>D</div>
-        <div>E</div>
-        <div>F</div>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
       </div>
 
       {/* PANTANAL */}
@@ -152,14 +191,19 @@ function App() {
               </div>
             ) : (
               <div className='containerPergunta'>
-                <h2>PERGUNTA SERIA TENTA ACERTAR AI</h2>
+                <h2>{pgtPantanal}</h2>
                 <form onSubmit={handleSubmit}>
-                  <input type="number"
-                  placeholder='INSIRA O CÓDIGO'
-                  value={inputCod}
-                  onChange={handleInputChange}
+                <label htmlFor="selectOption">{rptPantanal}</label>
+                  <select type="text"
+                  value={rptPantanal}
+                  onChange={() => handleInputChange}
                   maxLength={5}
-                  id='inputPTN' />
+                  id='respPTN'>
+                    <option value="">Selecione...</option>
+                    <option value="1">Opção 1</option>
+                    <option value="2">Opção 2</option>
+                    <option value="3">Opção 3</option>
+                  </select>
                   <button type='button' onClick={() => handleClick()}>ENVIAR</button>
                 </form>
               </div>
@@ -169,6 +213,15 @@ function App() {
         </div>
       </div>}
 
+      {modalNvl && <div className='cntModalNvl'>
+        <div className='contNivel'>
+          <p>ESCOLHA A DIFICULDADE DO PERCURSO:</p>
+          <div>
+            <button type='button' onClick={() => handleNvlEscolha(1)}>FÁCIL</button>
+            <button type='button' onClick={() => handleNvlEscolha(2)}>MÉDIO</button>
+          </div>
+        </div>
+      </div>}
 
       {codCorreto && <div className='modalErro'>
           <div className='erroContainer'>
