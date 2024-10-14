@@ -262,15 +262,16 @@
 }
 
 .containerPergunta{
-  margin: 50px;
+  margin-top: 50px;  
+  heigth: 100%;
   width: 90dvw;
   padding: 20px;
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-cintent: center;
-  gap: 20px;
+  justify-content: flex-start;
+  gap: 50px;
 }
 
 .containerPergunta h2{
@@ -278,6 +279,7 @@
   font-weight: 700;
   text-align: center;
   color: #f1f1f1;
+  text-shadow: 0.1em 0.1em 0.2em black
 }
 
 .containerPergunta form{
@@ -301,3 +303,29 @@
   border: none;
 }
 
+.iptRespSelector{
+  padding: 5px 50px;
+  text-decoration: none;
+  color: #222222;
+  background-color: #fcfcfc;
+  font-size: 1.2rem;
+  font-weigth: 500;
+  text-align: center;
+}
+
+.containerCardsMenores{
+  width: 100%;
+  heigth: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../src/assets/backgroundPapiroClaro.jpg);
+}
+
+.containerCardsMenores div{
+  max-width: 100%;
+  max-heigth: 100%;
+  border-radius: 15px;
+  background-image: url(../src/assets/backgroundPapiroClaro.jpg);
+}

@@ -16,24 +16,26 @@ import PantanalLocked from "./assets/pantanalLKD.jpg"
 function App() {
   
   const [nvlEscolhido, setNivelEscolhido] = useState(0);
-  const [pantanalCard, setPantanalCard] = useState(PantanalLocked)
 
   const [modalNvl, setModalNvl] = useState(true)
   const [modalPtn, setModalPtn] = useState(false)
 
-  const [inputCod, setInputCod] = useState('')
   const [codCorreto, setCodCorreto] = useState(false)
 
 
   {/* PERGUNTAS */}
   const [pgtPantanal, setPgtPantanal] = useState('')
-  const [rptPantanal, setRptPantanal] = useState('')
+  const [rptPantanal, setRptPantanal] = useState([])
+  const [rptCertaPtn, setRptCertaPtn] = useState(0)  
+  const [pantanalLocked, setPantanalLocked] = useState(true)
   
   const [pgtCaatinga, setPgtCaatinga] = useState('')
   const [pgtAmazonia, setPgtAmazonia] = useState('')
   const [pgtPampa, setPgtPampa] = useState('')
   const [pgtMtAtlantica, setPgtMtAtlantica] = useState('')
   const [pgtCerrado, setPgtCerrado] = useState('')
+
+  const [iptResposta, setIptResposta] = useState('');
 
   const handleNvlEscolha = (val) => {
     setNivelEscolhido(val);    
@@ -50,7 +52,16 @@ function App() {
         setPgtCerrado();
         setPgtMtAtlantica();
         setPgtPampa();
+
         setPgtPantanal('QUEM É MANUEL GOMES?');
+        setRptPantanal([{
+            id: 1, resposta: 'Jacaré'
+          }, {
+            id: 2, resposta: 'Onça Pintada'
+          }, {
+            id: 3, resposta: 'Tucano'
+        }])
+        setRptCertaPtn(3)
         break;
 
       case 2:
@@ -69,7 +80,7 @@ function App() {
 
   
   const handleInputChange = (event) => {
-    setRptPantanal(event.target.value)
+    setIptResposta(event.target.value)
   }
 
   
@@ -78,15 +89,20 @@ function App() {
     event.preventDefault();
   }
 
-  const handleClick = () => {
-    if(inputCod == 55558){
-      setPantanalCard(Pantanal)
-      setModalPtn(x => !x)
-    } else {
-      setInputCod("")
-      setCodCorreto(true)      
-    }
-  }
+  const handleRespostaEnvio = (bioma) => {
+    switch(bioma){
+      
+      case 1:
+        if (iptResposta == rptCertaPtn){
+          setPantanalLocked(false)
+          setModalPtn(x => !x)
+        } else {
+          setCodCorreto(x => !x)
+        } break;
+
+      default:
+        return 0
+  }}
 
   const handleModal = (num) => {
     switch(num){
@@ -117,28 +133,32 @@ function App() {
         className="mySwiper"
         >
           <SwiperSlide onClick={() => handleModal(1)}>
-            <img src={pantanalCard} alt="aaaaaa" width="auto" height="700"/>
+            <div className='containerCardsMenores'>
+              <div className={`${pantanalLocked ? 'pantanalCardLock' : 'pantanalCardOpen'}`}>
+                <h2>PANTANAL</h2>
+              </div>
+            </div>
           </SwiperSlide>
           <SwiperSlide onClick={() => handleModal(2)}>
-            <img src={pantanalCard} alt="aaaaaa" width="auto" height="700"/>
+            <img src={Pantanal} alt="aaaaaa" width="auto" height="700"/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={pantanalCard} alt="aaaaaa" width="auto" height="700"/>
+            <img src={Pantanal} alt="aaaaaa" width="auto" height="700"/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={pantanalCard} alt="aaaaaa" width="auto" height="700"/>
+            <img src={Pantanal} alt="aaaaaa" width="auto" height="700"/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={pantanalCard} alt="aaaaaa" width="auto" height="700"/>
+            <img src={Pantanal} alt="aaaaaa" width="auto" height="700"/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={pantanalCard} alt="aaaaaa" width="auto" height="700"/>
+            <img src={Pantanal} alt="aaaaaa" width="auto" height="700"/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={pantanalCard} alt="aaaaaa" width="auto" height="700"/>
+            <img src={Pantanal} alt="aaaaaa" width="auto" height="700"/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={pantanalCard} alt="aaaaaa" width="auto" height="700"/>
+            <img src={Pantanal} alt="aaaaaa" width="auto" height="700"/>
           </SwiperSlide>
         </Swiper>
       </div>
@@ -151,9 +171,9 @@ function App() {
 
       {/* PANTANAL */}
       {modalPtn && <div className='modal'>
-        <div className={`${pantanalCard === Pantanal ? 'pantanalUld' : 'pantanalLkd'} dentroModal`}>
+        <div className={`${!pantanalLocked ? 'pantanalUld' : 'pantanalLkd'} dentroModal`}>
             <h2 className='ttlBioma'>PANTANAL</h2>
-            {pantanalCard === Pantanal ? (
+            {!pantanalLocked ? (
               <div>
                 <div className='descricaoBiomas'>
                 <p>O Pantanal é a maior planície alagada do mundo, localizado principalmente no Brasil, mas também se estendendo pelo Paraguai e Bolívia. Conhecido por sua rica biodiversidade, o Pantanal é um dos ecossistemas mais importantes do planeta.</p>
@@ -193,18 +213,15 @@ function App() {
               <div className='containerPergunta'>
                 <h2>{pgtPantanal}</h2>
                 <form onSubmit={handleSubmit}>
-                <label htmlFor="selectOption">{rptPantanal}</label>
-                  <select type="text"
-                  value={rptPantanal}
-                  onChange={() => handleInputChange}
-                  maxLength={5}
-                  id='respPTN'>
-                    <option value="">Selecione...</option>
-                    <option value="1">Opção 1</option>
-                    <option value="2">Opção 2</option>
-                    <option value="3">Opção 3</option>
+                  <select value={iptResposta}
+                  onChange={handleInputChange}
+                  id='respPTN'
+                  className='iptRespSelector'>
+                    {rptPantanal.map((resp) =>
+                    <option key={resp.id} value={resp.id}>{resp.resposta}</option>
+                  )}
                   </select>
-                  <button type='button' onClick={() => handleClick()}>ENVIAR</button>
+                  <button type='button' onClick={() => handleRespostaEnvio(1)}>ENVIAR</button>
                 </form>
               </div>
             )}
@@ -225,7 +242,7 @@ function App() {
 
       {codCorreto && <div className='modalErro'>
           <div className='erroContainer'>
-            <p>CÓDIGO ERRADO CHEFE</p>
+            <p>RESPOSTA ERRADA</p>
             <button type='button' onClick={() => handleModalErro()}>TENTAR DE NOVO</button>
           </div>
       </div>}
