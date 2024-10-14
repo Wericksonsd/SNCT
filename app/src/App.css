@@ -168,13 +168,13 @@
 }
 
 .pantanalLkd{
-  background-image: url(../src/assets/pantanalLKD.jpg);
+  background-image: url(../src/assets/pantanalLocked.png);
   background-size: cover;  
   box-shadow: inset 0px 0px 28px 1px rgba(0,0,0,0.80);
 }
 
 .pantanalUld{
-  background-image: url(../src/assets/pantanalBG.jpg);
+  background-image: url(../src/assets/pantanalUnlocked.png);
   background-size: cover;
   background-position: center -15px;
   box-shadow: inset 0px 0px 28px 1px rgba(0,0,0,0.80);
@@ -320,11 +320,12 @@
   align-items: center;
   justify-content: center;
   background-image: url(../src/assets/backgroundPapiroClaro.jpg);
+  background-size: cover;
 }
 
 .cardsContainerInside{
-  width: 240px;
-  height: 560px;
+  width: 250px;
+  height: 570px;
   border-radius: 15px;
   padding: 15px;
   display: flex;
@@ -334,7 +335,8 @@
   background-color: #222222;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center;  
+  box-shadow: inset 0px 0px 40px 2px rgba(0,0,0,0.70);
 }
 
 .cardsContainerInside > h2{
@@ -353,9 +355,49 @@
 }
 
 .pantanalCardLock{
-  background-image: url(../src/assets/pantanalLKD.jpg)
+  background-image: url(../src/assets/pantanalLocked.png)
 }
 
 .pantanalCardOpen{
-  background-image: url(../src/assets/pantanalBG.jpg)
+  background-image: url(../src/assets/pantanalUnlocked.png)
+}
+
+.amazoniaCardLock{
+  background-image: url(../src/assets/amazoniaLocked.png)
+}
+
+.amazoniaCardOpen{
+  background-image: url(../src/assets/amazoniaUnlocked.png)
+}
+
+.caatingaCardLock{
+  background-image: url(../src/assets/caatingaLocked.png)
+}
+
+.caatingaCardOpen{
+  background-image: url(../src/assets/caatingaUnlocked.png)
+}
+
+.mtatlanticaCardLock{
+  background-image: url(../src/assets/mtatlanticaLocked.png)
+}
+
+.mtatlanticaCardOpen{
+  background-image: url(../src/assets/mtatlanticaUnlocked.png)
+}
+
+.cerradoCardLock{
+  background-image: url(../src/assets/cerradoLocked.png)
+}
+
+.cerradoCardOpen{
+  background-image: url(../src/assets/cerradoUnlocked.png)
+}
+
+.pampaCardLock{
+  background-image: url(../src/assets/pampaLocked.png)
+}
+
+.pampaCardOpen{
+  background-image: url(../src/assets/pampaUnlocked.png)
 }
