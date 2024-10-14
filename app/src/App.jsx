@@ -141,7 +141,7 @@ function App() {
         break;
 
       case 2:
-        setPgtPantanal('QUEM É MANUEL GOMES?');
+        setPgtPantanal('QUEM É MANOEL GOMES?');
         setRptPantanal([{
             id: 1, resposta: 'Jacaré'
           }, {
