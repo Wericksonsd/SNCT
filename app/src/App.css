@@ -166,12 +166,15 @@
 }
 
 .ttlBioma{
+  margin: auto;
   margin-top: 15px;
   font-size: 4rem;
   color: #f1f1f1;
   font-family: "Lilita One", sans-serif;
   font-weight: 400;
   font-style: normal;
+  text-align: center;    
+  text-shadow: 0.1em 0.1em 0.2em black;
 }
 
 .containerCardsMenores{  
