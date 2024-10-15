@@ -395,9 +395,9 @@ function App() {
       </div>
 
       <div className='insignias'>
-        <a href="#"><img src={escapeLogo} alt="EscapeRoom" height={40} /></a>
-        <a href="#"><img src={snctLogo} alt="SNCT" height={20}/></a>
-        <a href="#"><img src={ludicoLogo} alt="Ludico" height={45}/></a>
+        <a href="https://www.instagram.com/utfprbg/"><img src={escapeLogo} alt="EscapeRoom" height={40} /></a>
+        <a href="https://www.instagram.com/snct_cornelio/"><img src={snctLogo} alt="SNCT" height={20}/></a>
+        <a href="https://www.instagram.com/utfprbg/"><img src={ludicoLogo} alt="Ludico" height={45}/></a>
       </div>
 
       {/* PANTANAL */}
