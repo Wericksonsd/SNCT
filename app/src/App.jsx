@@ -139,17 +139,17 @@ function App() {
         }])
         setRptCertaMtAtlantica(3);
 
-        setPgtCerrado('Qual é a região predominante que se encontra o cerrado?');
+        setPgtCerrado('Quais regiões encontramos o cerrado?');
         setRptCerrado([{
-            id: 1, resposta: 'Centro-oeste'
+            id: 1, resposta: 'Centro-oeste, Norte e Nordeste'
           }, {
-            id: 2, resposta: 'Sul e Sudeste'
+            id: 2, resposta: 'Sul, Sudeste, Nordeste e Centro-Oeste'
           }, {
-            id: 3, resposta: 'Sudeste e Nordeste'
+            id: 3, resposta: 'Norte, Nordeste, Centro-Oeste e Sudeste'
           }, {
-            id: 4, resposta: 'Nordeste e Norte'
+            id: 4, resposta: 'Brasil todo'
         }])
-        setRptCertaCerrado(1);   
+        setRptCertaCerrado(4);   
 
         break;
 
