@@ -147,7 +147,7 @@ function App() {
           }, {
             id: 3, resposta: 'Norte, Nordeste, Centro-Oeste e Sudeste'
           }, {
-            id: 4, resposta: 'Brasil todo'
+            id: 4, resposta: 'Todas'
         }])
         setRptCertaCerrado(4);   
 
