@@ -6,6 +6,9 @@ import './App.css'
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/effect-cards'
+import escapeLogo from './assets/escapeLogo.svg'
+import ludicoLogo from './assets/ludicoCarimbo.svg'
+import snctLogo from './assets/SNCTLogo.svg'
 
 import { EffectCards } from 'swiper/modules'
 
@@ -76,15 +79,17 @@ function App() {
     switch(nivel){
 
       case 1:
-        setPgtPantanal('QUEM É MANUEL GOMES?');
+        setPgtPantanal('Qual dos seguintes rios é importante para o Pantanal?');
         setRptPantanal([{
-            id: 1, resposta: 'Jacaré'
+            id: 1, resposta: 'Rio Amazonas'
           }, {
-            id: 2, resposta: 'Onça Pintada'
+            id: 2, resposta: 'Rio Paraguai'
           }, {
-            id: 3, resposta: 'Tucano'
-        }])
-        setRptCertaPtn(3)
+            id: 3, resposta: 'Rio São Francisco'
+          }, {
+            id: 4, resposta: 'Rio Paraná'
+      }])
+        setRptCertaPtn(2)
 
         setPgtCaatinga('Quais regiões do Brasil são mais associadas à Caatinga?');
         setRptCaatinga([{
@@ -96,27 +101,31 @@ function App() {
           }, {
             id: 4, resposta: 'Nordeste'
         }])
-        setRptCertaCaatinga(3)
+        setRptCertaCaatinga(4)
 
-        setPgtAmazonia();
+        setPgtAmazonia('Além do Brasil, em qual destes países é possível encontrar o bioma Amazônia?');
         setRptAmazonia([{
-            id: 1, resposta: 'Jacaré'
+            id: 1, resposta: 'Chile'
           }, {
-            id: 2, resposta: 'Onça Pintada'
+            id: 2, resposta: 'Argentina'
           }, {
-            id: 3, resposta: 'Tucano'
-        }])
-        setRptCertaAmazonia(3);
+            id: 3, resposta: 'Paraguai'
+          }, {
+            id: 4, resposta: 'Suriname'
+      }])
+        setRptCertaAmazonia(4);
 
         setPgtPampa('Qual é o principal tipo de vegetação que existe no bioma Pampa?');
         setRptPampa([{
-            id: 1, resposta: 'Jacaré'
+            id: 1, resposta: 'Floresta densa'
           }, {
-            id: 2, resposta: 'Onça Pintada'
+            id: 2, resposta: 'Campos e pastagens'
           }, {
-            id: 3, resposta: 'Tucano'
+            id: 3, resposta: 'Deserto'
+          }, {
+            id: 4, resposta: 'Manguezais'
         }])
-        setRptCertaPampa(3);
+        setRptCertaPampa(2);
 
         setPgtMtAtlantica('Quais as características da vegetação da Mata Atlântica?');
         setRptMtAtlantica([{
@@ -145,15 +154,17 @@ function App() {
         break;
 
       case 2:
-        setPgtPantanal('QUEM É MANOEL GOMES?');
+        setPgtPantanal('Qual é uma característica marcante do bioma Pantanal?');
         setRptPantanal([{
-            id: 1, resposta: 'Jacaré'
+            id: 1, resposta: 'Clima árido e seco'
           }, {
-            id: 2, resposta: 'Onça Pintada'
+            id: 2, resposta: 'Planície alagada e sazonal'
           }, {
-            id: 3, resposta: 'Tucano'
-        }])
-        setRptCertaPtn(3)
+            id: 3, resposta: 'Presença de florestas densas'
+          }, {
+            id: 4, resposta: 'Elevadas cadeias de montanhas'
+      }])
+        setRptCertaPtn(2)
 
         setPgtCaatinga('Quais são as principais adaptações dos cactos da Caatinga para sobreviver no semiárido?');
         setRptCaatinga([{
@@ -165,37 +176,43 @@ function App() {
           },{
             id: 4, resposta: 'Folhas largas e flexíveis que captam a umidade do ar'
         }])
-        setRptCertaCaatinga(3)
+        setRptCertaCaatinga(2)
 
-        setPgtAmazonia();
+        setPgtAmazonia('Qual dessas aranhas é conhecida por comer pássaros, reconhecida como a maior do mundo:');
         setRptAmazonia([{
-            id: 1, resposta: 'Jacaré'
+            id: 1, resposta: 'Aranha Golias, Theraphosa blondi '
           }, {
-            id: 2, resposta: 'Onça Pintada'
+            id: 2, resposta: 'Tarântula de botas, Avicularia metalica'
           }, {
-            id: 3, resposta: 'Tucano'
-        }])
-        setRptCertaAmazonia(3);
+            id: 3, resposta: 'Aranha Saltadora, Salticidae'
+          }, {
+            id: 4, resposta: 'Aranha Pernuda, Pholcus phalangioides'
+      }])
+        setRptCertaAmazonia(1);
 
-        setPgtPampa();
+        setPgtPampa('Em qual estado do Brasil o bioma Pampa está localizado?');
         setRptPampa([{
-            id: 1, resposta: 'Jacaré'
+            id: 1, resposta: 'Amazonas'
           }, {
-            id: 2, resposta: 'Onça Pintada'
+            id: 2, resposta: 'Pará'
           }, {
-            id: 3, resposta: 'Tucano'
-        }])
-        setRptCertaPampa(3);
+            id: 3, resposta: 'Bahia'
+          }, {
+            id: 4, resposta: 'Rio Grande do Sul'
+      }])
+        setRptCertaPampa(4);
 
-        setPgtMtAtlantica();
+        setPgtMtAtlantica('Qual desses animais não faz parte desse bioma?');
         setRptMtAtlantica([{
-            id: 1, resposta: 'Jacaré'
+            id: 1, resposta: 'Mico-Leão-Dourado'
           }, {
-            id: 2, resposta: 'Onça Pintada'
+            id: 2, resposta: 'Arara-azul'
           }, {
-            id: 3, resposta: 'Tucano'
-        }])
-        setRptCertaMtAtlantica(3);
+            id: 3, resposta: 'Onça-Pintada'
+          }, {
+            id: 4, resposta: 'Tucano'
+      }])
+        setRptCertaMtAtlantica(2);
 
         setPgtCerrado('Qual animal é a cara do cerrado?');
         setRptCerrado([{
@@ -317,7 +334,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className='tituloBioma'>BUSCA AOS BIOMAS</h1>
+      <h1 className='tituloBioma'>BUSCA AOS <span className='ttlMaior'>BIOMAS</span></h1>
       <div className='swiperContainer'>
         <Swiper
         effect={'cards'}
@@ -378,9 +395,9 @@ function App() {
       </div>
 
       <div className='insignias'>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
+        <a href="#"><img src={escapeLogo} alt="EscapeRoom" height={40} /></a>
+        <a href="#"><img src={snctLogo} alt="SNCT" height={20}/></a>
+        <a href="#"><img src={ludicoLogo} alt="Ludico" height={45}/></a>
       </div>
 
       {/* PANTANAL */}

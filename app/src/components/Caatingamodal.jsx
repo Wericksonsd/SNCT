@@ -8,27 +8,17 @@ export const CaatingaModal = ({ caatingaLocked, pgtCaatinga, rptCaatinga, iptRes
         {!caatingaLocked ? (
             <div>
             <div className='descricaoBiomas'>
-                <p>O Pantanal é a maior planície alagada do mundo, localizado principalmente no Brasil, mas também se estendendo pelo Paraguai e Bolívia. Conhecido por sua rica biodiversidade, o Pantanal é um dos ecossistemas mais importantes do planeta.</p>
+                <p>A Caatinga é um bioma exclusivo do semiárido brasileiro, caracterizado por vegetação adaptada à seca, como cactos e plantas de folhas espinhosas. Abriga espécies endêmicas, como o calango-de-cauda-lisa e o tatu-bola. Apesar de sua resiliência, a Caatinga enfrenta desafios como a desertificação e a degradação ambiental.</p>
                 
                 <div className='itemsDesc'>
                 <span className='ttlItem'>ÁREA</span>
-                <span className='descItem'>884mil km²</span>
+                <span className='descItem'>844.453 km²</span>
                 </div>
 
                 <div className='itemsDesc'>
                 <span className='ttlItem'>REGIÕES</span>
-                <span className='descItem'>Norte, Nordeste</span>
+                <span className='descItem'>Nordeste, Sudeste</span>
                 </div>
-
-                <div className='itemsDesc'>
-                <span className='ttlItem'>FAUNA</span>
-                <span className='descItem'>
-                    Tatu-Bola <span className='sub'>tatubolaaa</span><br />
-                    Tatu-Bola <span className='sub'>tatubolaaa</span><br />
-                    Tatu-Bola <span className='sub'>tatubolaaa</span>
-                </span>
-                </div>
-
             </div>
             <div className='coor'></div>
             </div>

@@ -8,27 +8,17 @@ export const CerradoModal = ({ cerradoLocked, pgtCerrado, rptCerrado, iptRespost
         {!cerradoLocked ? (
             <div>
             <div className='descricaoBiomas'>
-                <p>O Pantanal é a maior planície alagada do mundo, localizado principalmente no Brasil, mas também se estendendo pelo Paraguai e Bolívia. Conhecido por sua rica biodiversidade, o Pantanal é um dos ecossistemas mais importantes do planeta.</p>
+                <p>O Cerrado tem um clima tropical, metade do ano ele é seco e metade do ano é chuvoso, tem uma terra pobre em nutrientes, porém sendo bem rico em alumínio, além de ser uma terra porosa, tendo uma folhagem rasa, ele também é conhecido com savana brasileira.</p>
                 
                 <div className='itemsDesc'>
                 <span className='ttlItem'>ÁREA</span>
-                <span className='descItem'>884mil km²</span>
+                <span className='descItem'>1,5milhão de km²</span>
                 </div>
 
                 <div className='itemsDesc'>
                 <span className='ttlItem'>REGIÕES</span>
-                <span className='descItem'>Norte, Nordeste</span>
+                <span className='descItem'>Centro-oeste</span>
                 </div>
-
-                <div className='itemsDesc'>
-                <span className='ttlItem'>FAUNA</span>
-                <span className='descItem'>
-                    Tatu-Bola <span className='sub'>tatubolaaa</span><br />
-                    Tatu-Bola <span className='sub'>tatubolaaa</span><br />
-                    Tatu-Bola <span className='sub'>tatubolaaa</span>
-                </span>
-                </div>
-
             </div>
             <div className='coor'></div>
             </div>

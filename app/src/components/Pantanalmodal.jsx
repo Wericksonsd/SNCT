@@ -8,27 +8,17 @@ export const PantanalModal = ({ pantanalLocked, pgtPantanal, rptPantanal, iptRes
         {!pantanalLocked ? (
             <div>
             <div className='descricaoBiomas'>
-                <p>O Pantanal é a maior planície alagada do mundo, localizado principalmente no Brasil, mas também se estendendo pelo Paraguai e Bolívia. Conhecido por sua rica biodiversidade, o Pantanal é um dos ecossistemas mais importantes do planeta.</p>
+                <p>O Pantanal é a maior planície inundável do mundo, com ciclos anuais de cheia e seca que sustentam sua rica biodiversidade, incluindo onças-pintadas e aves aquáticas. Esse ecossistema é essencial para a preservação de espécies e oferece serviços ambientais valiosos. No entanto, enfrenta ameaças como o desmatamento e a expansão agropecuária.</p>
                 
                 <div className='itemsDesc'>
                 <span className='ttlItem'>ÁREA</span>
-                <span className='descItem'>884mil km²</span>
+                <span className='descItem'>150.355 km² no Brasil</span>
                 </div>
 
                 <div className='itemsDesc'>
                 <span className='ttlItem'>REGIÕES</span>
-                <span className='descItem'>Norte, Nordeste</span>
+                <span className='descItem'>Centro-Oeste</span>
                 </div>
-
-                <div className='itemsDesc'>
-                <span className='ttlItem'>FAUNA</span>
-                <span className='descItem'>
-                    Tatu-Bola <span className='sub'>tatubolaaa</span><br />
-                    Tatu-Bola <span className='sub'>tatubolaaa</span><br />
-                    Tatu-Bola <span className='sub'>tatubolaaa</span>
-                </span>
-                </div>
-
             </div>
             <div className='coor'></div>
             </div>

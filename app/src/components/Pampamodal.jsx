@@ -8,27 +8,17 @@ export const PampaModal = ({ pampaLocked, pgtPampa, rptPampa, iptResposta, handl
         {!pampaLocked ? (
             <div>
             <div className='descricaoBiomas'>
-                <p>O Pantanal é a maior planície alagada do mundo, localizado principalmente no Brasil, mas também se estendendo pelo Paraguai e Bolívia. Conhecido por sua rica biodiversidade, o Pantanal é um dos ecossistemas mais importantes do planeta.</p>
+                <p>O bioma Pampa, no Rio Grande do Sul, é formado por vastas planícies de gramíneas e clima subtropical. Abriga espécies como o quero-quero e a capivara, sendo importante para pecuária e agricultura. A expansão dessas atividades ameaça sua biodiversidade, exigindo esforços de conservação.</p>
                 
                 <div className='itemsDesc'>
                 <span className='ttlItem'>ÁREA</span>
-                <span className='descItem'>884mil km²</span>
+                <span className='descItem'>176.496km² no Brasil</span>
                 </div>
 
                 <div className='itemsDesc'>
                 <span className='ttlItem'>REGIÕES</span>
-                <span className='descItem'>Norte, Nordeste</span>
+                <span className='descItem'>Sul</span>
                 </div>
-
-                <div className='itemsDesc'>
-                <span className='ttlItem'>FAUNA</span>
-                <span className='descItem'>
-                    Tatu-Bola <span className='sub'>tatubolaaa</span><br />
-                    Tatu-Bola <span className='sub'>tatubolaaa</span><br />
-                    Tatu-Bola <span className='sub'>tatubolaaa</span>
-                </span>
-                </div>
-
             </div>
             <div className='coor'></div>
             </div>

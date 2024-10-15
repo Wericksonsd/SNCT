@@ -8,27 +8,17 @@ export const AmazoniaModal = ({ amazoniaLocked, pgtAmazonia, rptAmazonia, iptRes
         {!amazoniaLocked ? (
             <div>
             <div className='descricaoBiomas'>
-                <p>O Pantanal é a maior planície alagada do mundo, localizado principalmente no Brasil, mas também se estendendo pelo Paraguai e Bolívia. Conhecido por sua rica biodiversidade, o Pantanal é um dos ecossistemas mais importantes do planeta.</p>
+                <p>A Amazônia é o maior bioma do Brasil e uma das florestas tropicais mais biodiversas do mundo, abrigando milhões de espécies e comunidades indígenas. Ela desempenha um papel crucial na regulação do clima global, mas enfrenta ameaças como o desmatamento e a exploração de recursos naturais. Sua preservação é vital para a sustentabilidade ambiental e cultural da região.</p>
                 
                 <div className='itemsDesc'>
                 <span className='ttlItem'>ÁREA</span>
-                <span className='descItem'>884mil km²</span>
+                <span className='descItem'>4.196.943km² no Brasil</span>
                 </div>
 
                 <div className='itemsDesc'>
                 <span className='ttlItem'>REGIÕES</span>
-                <span className='descItem'>Norte, Nordeste</span>
+                <span className='descItem'>Norte</span>
                 </div>
-
-                <div className='itemsDesc'>
-                <span className='ttlItem'>FAUNA</span>
-                <span className='descItem'>
-                    Tatu-Bola <span className='sub'>tatubolaaa</span><br />
-                    Tatu-Bola <span className='sub'>tatubolaaa</span><br />
-                    Tatu-Bola <span className='sub'>tatubolaaa</span>
-                </span>
-                </div>
-
             </div>
             <div className='coor'></div>
             </div>

@@ -4,31 +4,21 @@ export const MtAtlanticaModal = ({ mtAtlanticaLocked, pgtMtAtlantica, rptMtAtlan
     return (
     <div className='modal'>
         <div className={`${!mtAtlanticaLocked ? 'mtatlanticaUld' : 'mtatlanticaLkd'} dentroModal`}>
-        <h2 className='ttlBioma'>PANTANAL</h2>
+        <h2 className='ttlBioma'>MATA ATLÂNTICA</h2>
         {!mtAtlanticaLocked ? (
             <div>
             <div className='descricaoBiomas'>
-                <p>O Pantanal é a maior planície alagada do mundo, localizado principalmente no Brasil, mas também se estendendo pelo Paraguai e Bolívia. Conhecido por sua rica biodiversidade, o Pantanal é um dos ecossistemas mais importantes do planeta.</p>
+                <p>A Mata Atlântica originalmente cobria mais de 1,3 milhões de km², com vegetação densa e alta umidade. É lar de espécies icônicas como o Mico-Leão-Dourado, onças-pintadas e tucanos. Sua flora inclui orquídeas, araucárias e pau-brasil.</p>
                 
                 <div className='itemsDesc'>
-                <span className='ttlItem'>ÁREA</span>
-                <span className='descItem'>884mil km²</span>
+                    <span className='ttlItem'>ÁREA</span>
+                    <span className='descItem'>200.205,3 km2</span>
                 </div>
 
                 <div className='itemsDesc'>
-                <span className='ttlItem'>REGIÕES</span>
-                <span className='descItem'>Norte, Nordeste</span>
+                    <span className='ttlItem'>REGIÕES</span>
+                    <span className='descItem'>Nordeste, Sudeste e Sul</span>
                 </div>
-
-                <div className='itemsDesc'>
-                <span className='ttlItem'>FAUNA</span>
-                <span className='descItem'>
-                    Tatu-Bola <span className='sub'>tatubolaaa</span><br />
-                    Tatu-Bola <span className='sub'>tatubolaaa</span><br />
-                    Tatu-Bola <span className='sub'>tatubolaaa</span>
-                </span>
-                </div>
-
             </div>
             <div className='coor'></div>
             </div>
